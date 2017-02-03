@@ -1,1 +1,1 @@
-alert('Iniciando!');
+alert('Iniciando js en el cliente mejorado !');
