@@ -20,7 +20,8 @@
   "homepage": "https://github.com/nobitco/ttdigital#readme",
   "dependencies": {
     "express": "^4.14.1",
-    "materialize-css": "^0.98.0"
+    "materialize-css": "^0.98.0",
+    "pug": "^2.0.0-beta10"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
