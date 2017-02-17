@@ -66,6 +66,70 @@ var sectionThree = function() {
       </div>`;
 };
 
+var tmpContactanos = function() {
+  return yo`<div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Contáctanos!</h5>
+            <form class="s12" action="contact.php" method="post" id="contactForm">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="mdi material-icons white-text prefix">perm_identity</i>
+                  <input type="text" name="name" class="validate white-text">
+                  <label for="nombre" class="white-text">Nombre</label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="mdi material-icons white-text prefix">email</i>
+                  <input type="text" name="email" class="validate white-text">
+                  <label for="email" class="white-text">Email</label>
+                </div>
+                <div class="input-field col s12">
+                  <i class="mdi material-icons white-text prefix">mode_edit</i>
+                  <textarea id="message" name="message" class="materialize-textarea white-text" style="padding-bottom: 0px; heigth=22px;"></textarea>
+                  <label for="message" class="white-text">Tu mensaje</label>
+                </div>
+                <div class="input-field col s12 offset-m6 m6 l12">
+                  <i class="mdi material-icons white-text prefix">mode_edit</i>
+                  <img src="captcha.png" class="right" width="45px" style="margin-top:-20px;">
+                  <input type="text" name="captcha" id="captcha" maxlength="6" size="6" class="validate white-text">
+                  <label for="captcha" class="white-text">Número de verificación</label>
+                </div>
+                <div class="col offset-s7 s5">
+                <button class="btn waves-effect waves-light white light-green-text text-darken-2 right" type="submit">Send<i class="mdi material-icons right text-darken-2">send</i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col offset-l2 l4 s12" style="text-align: right;">
+            <h5 class="white-text">Contacto</h5>
+            <ul>
+              <li>
+                <span class="white-text">
+                  Nobit S.A.S
+                  <br>
+                  7ma-792. Santander de Quilichao. Cauca. Colombia
+                </span> 
+              </li>
+              <li>
+                <a href="#" class="white-text">jesmqz@gmail.com</a>
+              </li>
+              <li><span class="white-text">Tel: +57 311-7075824</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>`
+};
+
+var tmpCopyRight = function() {
+  return yo`<div class="footer-copyright">
+        <div class="container">
+          <span class="white-text">© 2017<a href="http://www.nobit.co/portal/" class="white-text" target="_blank"> Nobit S.A.S</a></span>
+        </div>
+      </div>`;
+};
+
 exports.sectionOne = sectionOne;
 exports.sectionTwo = sectionTwo;
 exports.sectionThree = sectionThree;
+exports.tmpContactanos = tmpContactanos;
+exports.tmpCopyRight = tmpCopyRight;

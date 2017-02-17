@@ -4,7 +4,11 @@ var template = require('./template');
 
 page('/', function(ctx, next) {
 	var main = document.getElementById('main');
-    main.appendChild(template.sectionOne());
+    empty(main).appendChild(template.sectionOne());
     main.appendChild(template.sectionTwo());
     main.appendChild(template.sectionThree());
+    var contact = document.getElementById('contact');
+    empty(contact).appendChild(template.tmpContactanos());
+    contact.appendChild(template.tmpCopyRight());
+    contact.style.position = "relative";
 })
