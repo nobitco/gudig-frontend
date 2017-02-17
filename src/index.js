@@ -1,1 +1,5 @@
-alert('Iniciando js en el cliente mejorado !');
+var page = require('page');
+
+require('./homepage');
+
+page();

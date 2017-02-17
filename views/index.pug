@@ -1,6 +1,11 @@
+doctype html
 html
   head
+    // Import Google Icon Font
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    // css general
     link(rel='stylesheet' type='text/css' href='app.css')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
     link(rel='apple-touch-icon', sizes='57x57', href='/apple-icon-57x57.png')
     link(rel='apple-touch-icon', sizes='60x60', href='/apple-icon-60x60.png')
     link(rel='apple-touch-icon', sizes='72x72', href='/apple-icon-72x72.png')
@@ -18,17 +23,70 @@ html
     meta(name='msapplication-TileColor', content='#ffffff')
     meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
     meta(name='theme-color', content='#ffffff')
-    meta(name="viewport" content='width=device-width, initial-scale=1.0, user-scalable=no')
+    // Let browser know website is optimized for mobile
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(charset='utf-8')
   body
-    .container
-      .divider
-      .section
-        h5 Appweb TTdigital
-        p Inicio de construcción
-      .divider
-      .section
-        h5 Materializecss
-        p Verificado
+    header.no-padding
+      .navbar-fixed
+        nav.navfeature
+          .container.nav-wrapper
+            a.brand-logo(href='#')
+              span(style='font-weight: 300; font-size: 1.3rem;') TTdigital
+            ul#nav-mobile.right.hide-on-med-and-down
+              li
+                a(href='sass.html') Login
+              li
+                a(href='badges.html') Leyes
+              li
+                a(href='collapsible.html') CRM
+    main#main.no-padding
+    footer#contact.page-footer(style='margin-top:0px; padding-left:0px;')
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Contáctanos!
+            form#contactForm.s12(action='contact.php', method='post')
+              .row
+                .input-field.col.s6
+                  i.mdi.material-icons.white-text.prefix perm_identity
+                  input.validate.white-text(type='text', name='name')
+                  label.white-text(for='nombre') Nombre
+                .input-field.col.s6
+                  i.mdi.material-icons.white-text.prefix email
+                  input.validate.white-text(type='text', name='email')
+                  label.white-text(for='email') Email
+                .input-field.col.s12
+                  i.mdi.material-icons.white-text.prefix mode_edit
+                  textarea#message.materialize-textarea.white-text(name='message', style='padding-bottom: 0px; heigth=22px;')
+                  label.white-text(for='message') Tu mensaje
+                .input-field.col.s12.offset-m6.m6.l12
+                  i.mdi.material-icons.white-text.prefix mode_edit
+                  img.right(src='captcha.png', width='45px', style='margin-top:-20px;')
+                  input#captcha.validate.white-text(type='text', name='captcha', maxlength='6', size='6')
+                  label.white-text(for='captcha') Número de verificación
+                .col.offset-s7.s5
+                  button.btn.waves-effect.waves-light.white.light-green-text.text-darken-2.right(type='submit')
+                    | Send
+                    i.mdi.material-icons.right.text-darken-2 send
+          .col.offset-l2.l4.s12(style='text-align: right;')
+            h5.white-text Contacto
+            ul
+              li
+                span.white-text
+                  | Nobit S.A.S
+                  br
+                  |                   7ma-792. Santander de Quilichao. Cauca. Colombia
+              li
+                a.white-text(href='#') jesmqz@gmail.com
+              li
+                span.white-text Tel: +57 311-7075824
+      .footer-copyright
+        .container
+          span.white-text
+            | © 2017
+            a.white-text(href='http://www.nobit.co/portal/', target='_blank')  Nobit S.A.S
+  // Import jQuery before materialize.js
   script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
   script(src='app.js' type='application/javascript')
+  script(src='materialize.js' type='application/javascript')

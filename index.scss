@@ -1,5 +1,186 @@
 @import "node_modules/materialize-css/sass/materialize.scss";
 
-body {
-	background-color: white;
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+.no-padding {
+	padding: 0px !important;
+}
+
+.navbar-fixed {
+	position: relative;
+	height: 56px;
+	z-index: 997;
+}
+
+.navfeature {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+.navbar-fixed nav {
+	position: fixed;
+}
+
+nav {
+	color: #fff;
+	background-color: #689f38;
+	width: 100%;
+	height: 64px;
+
+}
+
+.section.no-pad-top {
+	padding-top: 0;
+}
+
+.light-green.darken-1 {
+	background-color: #7cb342 !important;
+}
+
+.start-splash-section {
+	overflow: hidden;
+	height: 400px;
+}
+
+.section {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	.no-pad-bot {
+		padding-bottom: 0;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+}
+
+.start-splash-header-text {
+	font-size: 30px;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+
+.start-header-paragraph-text {
+	font-size: 18px;
+	line-height: 28px;
+	max-width: 440px;
+}
+
+.white-text {
+	color: #fff !important;
+}
+
+.white {
+	background-color: #fff !important;
+}
+
+h5.start {
+	padding-bottom: 20px;
+}
+
+h5 {
+	font-size: 1.64rem;
+	line-height: 110%;
+	margin: 0.82rem 0 0.656rem 0;
+}
+
+.start-paragraph-text {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+.text-primarycolor {
+	color: #689f38;
+}
+
+p {
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+.start-feature-list {
+	margin-bottom: 16px;
+	padding-left: 16px;
+}
+
+.gray {
+	background-color: rgb(236,236,236);
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+footer.footer-copyright {
+	overflow: hidden;
+	min-height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 10px 10px;
+	color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(51,51,51,0.08);
+}
+
+footer.page-footer {
+	padding-top: 20px;
+	background-color: #689f38;
+}
+
+.splash-image-container {
+	width: 100%;
+	max-width: 740px;
+	height: 720px;
+}
+
+.splash-image {
+	width: 100%;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.z-depth-1 {
+	box-shadow:
+	0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.input-field {
+	position: relative;
+	margin-top: 1rem;
+}
+
+.row .col.s6 {
+	width: 50%;
+	margin-left: auto;
+	left: auto;
+	right: auto;
+}
+
+.input-field .prefiz {
+	position: absolute;
+	width: 3rem;
+	font-size: 2rem;
+	transition: color .2s;
+}
+
+.mdi {
+	display: inline-block;
+	font: normal normal normal 24px/1 "Material Design Icons";
+	transform: translate(0, 0);
+}
+
+textarea.materialize-textarea {
+	overflow-y: hidden;
+	padding: .8rem 0 1.6rem 0;
+	resize: none;
+	min-height: 3rem;
 }
