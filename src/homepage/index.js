@@ -1,8 +1,10 @@
 var page = require('page');
 var empty = require('empty-element');
 var template = require('./template');
+var title = require('title');
 
 page('/', function(ctx, next) {
+	title('TTdigital');
 	var main = document.getElementById('main');
     empty(main).appendChild(template.sectionOne());
     main.appendChild(template.sectionTwo());
