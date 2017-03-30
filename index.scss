@@ -1,3 +1,11 @@
+
+$primary-color: #0e131d;
+$primary-color-light: #34476c;
+$primary-color-lighter:#99bdef;
+$secondary-color: #e1ec46;
+
+
+
 @import "node_modules/materialize-css/sass/materialize.scss";
 
 /* Welcome to Compass.
@@ -5,6 +13,69 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+html {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+//reflective-color;
+.reflective{
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/* FORM ELEMENTS STYLES */
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $primary-color-lighter;
+    box-shadow: 0 1px 0 0 $primary-color-lighter; 
+    color:#99bdef;
+}
+
+input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: $primary-color-lighter;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    border-bottom: 1px solid $primary-color-light;
+}
+
+input:not([type]).valid, input:not([type]):focus.valid, input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime].valid, input[type=datetime]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {
+    border-bottom: 1px solid #66bb6a;
+    box-shadow: 0 1px 0 0 #66bb6a;
+}
+
+.input-field .prefix{
+  top: 6px;
+}
+.input-field .prefix.active{
+   color: $primary-color-lighter;
+}
+
+.input-field label {
+  color: $primary-color-light;
+}
+
+/* LOGIN */
+
+.section#login{
+  padding-top: 100px;
+}
+#login-view{
+  background-color: $primary-color;
+}
+
+#login-btn{
+  margin-top: 40px;
+}
+
+#login-form{
+  color: $primary-color-light;
+  margin-top: 20px;
+}
 .no-padding {
 	padding: 0px !important;
 }

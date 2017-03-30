@@ -28,7 +28,7 @@ gulp.task('js', function(){
 
 gulp.task('scripts', function () {
     browserify('./src/index.js')
-        .transform(babel)
+        .transform(babel, {presets: ["es2015"]})
         .bundle()
         .pipe(source('index.js'))
         .pipe(rename('app.js'))
@@ -37,7 +37,7 @@ gulp.task('scripts', function () {
 
 gulp.task('watch', ['styles', 'scripts','assets'], function(){
   gulp
-    .watch(['index.scss', './src/**' , './assets/*.*'], ['styles', 'scripts','assets']).on('change', function(event){
+    .watch(['index.scss', './src/**' , './assets/*.*'], ['styles', 'scripts','assets', 'js']).on('change', function(event){
   console.log(event.path + " " + event.type);
 });  //watch ./src/** to watch all templates.js an index.js in src 
 });
