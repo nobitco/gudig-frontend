@@ -5,7 +5,6 @@ var babel = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var preset = require('babel-preset-es2015');
-var watchify = require('watchify');
 
 gulp.task('styles', function(){
 	gulp
@@ -27,29 +26,6 @@ gulp.task('js', function(){
         .pipe(gulp.dest('public'));
 })
 
-function compile(watch) {
-    var bundle = watchify(browserify('./src/index.js'));
-
-    function rebundle(){
-        bundle
-        .transform(babel, {presets: ["es2015"]})
-        .bundle()
-        .on('error', function (err) { console.log(err); this.emit('end') })
-        .pipe(source('index.js'))
-        .pipe(rename('app.js'))
-        .pipe(gulp.dest('public'));
-    }
-
-    if(watch) {
-        bundle.on('update', function(){
-            console.log('--> Bundling...');
-            rebundle();
-        })
-    }
-
-    rebundle();
-}
-
 gulp.task('scripts', function () {
     browserify('./src/index.js')
         .transform(babel)
@@ -59,12 +35,11 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('public'));
 });
 
-gulp.task('build', function () {
-    return compile();
+gulp.task('watch', ['styles', 'scripts','assets'], function(){
+  gulp
+    .watch(['index.scss', './src/**' , './assets/*.*'], ['styles', 'scripts','assets']).on('change', function(event){
+  console.log(event.path + " " + event.type);
+});  //watch ./src/** to watch all templates.js an index.js in src 
 });
 
-gulp.task('watch', function(){
-    return compile(true);
-});
-
-gulp.task('default', ['styles', 'assets', 'build', 'js']);
+gulp.task('default', ['styles', 'assets', 'js', 'scripts']);
