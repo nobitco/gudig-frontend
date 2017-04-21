@@ -1,5 +1,21 @@
 var express = require('express');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var expressSession = require('express-session');
+var passport = require('passport');
+
 var app = express();
+
+app.set(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(expressSession({
+  secret: config.secret,
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.set('view engine', 'pug');
 app.use(express.static('public'));

@@ -19,10 +19,15 @@
   },
   "homepage": "https://github.com/nobitco/ttdigital#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
     "empty-element": "^1.0.0",
     "express": "^4.14.1",
+    "express-session": "^1.15.2",
     "materialize-css": "^0.98.0",
     "page": "^1.7.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "pug": "^2.0.0-beta10",
     "title": "^1.0.0",
     "yo-yo": "^1.4.0"
