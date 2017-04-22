@@ -3,6 +3,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressSession = require('express-session');
 var passport = require('passport');
+var config = require('./config');
 
 var app = express();
 
