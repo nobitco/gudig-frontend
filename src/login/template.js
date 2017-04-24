@@ -11,16 +11,16 @@ var tmpLogin = function(){
                   <h4 class="start white-text left-align">Gudig</h4>
                   <h6 class="grey-text left-align">Login</h6>
                 </div>
-                <form class="col s12 " id="login-form">
+                <form class="col s12 " id="login-form" action="/signin" method="POST">
                   <div class="row">
                     <div class="input-field col s12">
                       <i class="material-icons prefix">person</i>
-                      <input id="username" type="text" class="validate">
+                      <input id="username" name="username" type="text" class="validate">
                       <label for="icon_prefix">Nombre de usuario:</label>
                     </div>
                     <div class="input-field col s12">
                       <i class="material-icons prefix">lock</i>
-                      <input id="password" type="password" class="validate">
+                      <input id="password" name="password" type="password" class="validate">
                       <label for="icon_password">Contraseña:</label>
                     </div>
                     <div class="col s12">
